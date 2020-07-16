@@ -1,0 +1,32 @@
+@import "./reset.css";
+
+.content__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 150px;
+}
+
+.clock__container{
+    margin: 20px 0;
+}
+
+.clock__container .time{
+    font-size: 1050%;
+    color: #f5f6fa;
+}
+
+.input__container input{
+    padding-top: 10px;
+    background: 0;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
