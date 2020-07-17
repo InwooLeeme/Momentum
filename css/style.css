@@ -1,4 +1,5 @@
 @import "./reset.css";
+@import "./sayHello.css";
 
 .content__container{
     width: 100%;
@@ -19,14 +20,8 @@
     color: #f5f6fa;
 }
 
-.input__container input{
-    padding-top: 10px;
-    background: 0;
-    border: 0;
-    outline: none;
-    border-bottom: 2px solid #fff;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
+body{
+    background-color: black;
 }
+
 
