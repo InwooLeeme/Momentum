@@ -1,5 +1,7 @@
 @import "./reset.css";
 @import "./sayHello.css";
+@import "./background.css";
+@import "./toDo.css";
 
 .content__container{
     width: 100%;
@@ -21,7 +23,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: #34495e;
 }
 
 

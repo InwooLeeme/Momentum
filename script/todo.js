@@ -6,6 +6,17 @@ var TODOS_LS = 'toDos';
 
 var toDos = [];
 
+function deleteToDo(event){
+   var btn = event.target;
+   var li = btn.parentNode;
+   toDoList.removeChild(li);
+   var cleanToDos = toDos.filter(function(toDo){
+       return toDo.id !== parseInt(li.id);
+   });
+   toDos = cleanToDos;
+   saveToDos();
+}
+
 function saveToDos(){
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
 }
@@ -13,10 +24,14 @@ function saveToDos(){
 function paintToDos(text){
     var li = document.createElement("li");
     var delBtn = document.createElement('button');
-    delBtn.innerText = "❌";
+    delBtn.innerText = "X";
+    delBtn.addEventListener("click",deleteToDo);
     var span = document.createElement('span');
+    var box = document.createElement('input');
+    var checkBox = box.setAttribute("type","checkbox");
     var newId = toDos.length + 1;
     span.innerText = text;
+    li.appendChild(box);
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;
