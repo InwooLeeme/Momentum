@@ -2,6 +2,7 @@
 @import "./sayHello.css";
 @import "./background.css";
 @import "./toDo.css";
+@import "./lesson.css";
 
 .content__container{
     width: 100%;
