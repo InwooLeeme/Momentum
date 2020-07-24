@@ -1,0 +1,24 @@
+.header__section .header__top {
+    height:60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0px 10px;
+}
+
+.header__top .right__section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    color: rgba(255,255,255,0.85);
+}
+
+.right__section .js-place:hover{
+    color: rgba(255,255,255,1);
+}
+
+#weather-icon{
+    margin-right: 10px;
+}

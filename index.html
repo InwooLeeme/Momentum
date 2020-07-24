@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <title>Momentum</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
 </head>
 <body>
+    <section class="header__section">
+        <header class="header__top">
+            <div class="left__section">
+                <input type="search" name="" id="">
+            </div>
+            <div class="right__section">
+                <i id="weather-icon" ></i>
+                <div class="condition">
+                    <div class="js-weather"></div>
+                    <span class="js-place"></span>  
+                </div>
+            </div>
+        </header>
+    </section>
     <div class="content__container">
         <div class="clock__section">
             <div class="clock__container">
@@ -25,15 +43,16 @@
             </form>
             <ul class="toDoList"></ul>
         </section>
-        <section class="lesson__section">
+        
+        <!-- <section class="lesson__section">
             <span class="lesson__text"></span>
-        </section>
+        </section> -->
     </div>
     <script src="./script/clock.js"></script>
     <script src="./script/sayHello.js"></script>
     <script src="./script/background.js"></script>
     <script src="./script/todo.js"></script>
     <script src="./script/weather.js"></script>
-    <script src="./script/lesson.js"></script>
+    <!-- <script src="./script/lesson.js"></script> -->
 </body>
 </html>
