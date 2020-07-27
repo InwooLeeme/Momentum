@@ -4,6 +4,7 @@
 @import "./toDo.css";
 @import "./lesson.css";
 @import "./header.css";
+@import "./pomodoro.css";
 
 .content__container{
     width: 100%;
@@ -22,10 +23,6 @@
 .clock__container .time{
     font-size: 1050%;
     color: #f5f6fa;
-}
-
-body{
-    background-color: #34495e;
 }
 
 

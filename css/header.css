@@ -19,6 +19,25 @@
     color: rgba(255,255,255,1);
 }
 
+.left__section{
+    width: 260px;
+    height: 20px;
+}
+
+.left__section .search__bar{
+    background:0;
+    outline: none;
+    border: none;
+}
+.left__section select{
+    opacity: 0;
+}
+
+.left__section:hover{
+    border-bottom: 1px solid #ffffff;
+    opacity: 1;
+}
+
 #weather-icon{
     margin-right: 10px;
 }

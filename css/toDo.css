@@ -11,7 +11,7 @@
     
 }
 
-.toDoInput:hover{
+.toDoInput:focus{
     animation: floating 2s linear infinite;
 }
 
