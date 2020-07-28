@@ -7,7 +7,7 @@ var COORDS = 'coords';
 
 function getWeather(lat, lon){
 fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
     ).then(function(response){
         return response.json();
     }).then(function(json){
@@ -16,14 +16,29 @@ fetch(
             icon = json.weather[0].main;
         weather.innerText = `${temperature}`;
         locate.innerText = `${place}`;
-        if(icon === 'Clouds'){
-            weatherIcon.className += "fas fa-cloud fa-2x";
-        }
+        chageIcon(icon);
         /* console.log(json.weather[0].main);
         console.log(weatherIcon); */
     });
 }
 
+function chageIcon(icon){
+    if(icon === 'Clouds'){
+        weatherIcon.className += "fas fa-cloud fa-2x";
+    }
+    else if(icon === 'Rain'){
+        weatherIcon.className += "fas fa-cloud-rain fa-2x";
+    }
+    else if(icon ==='Mist'){
+        weatherIcon.className += "fas fa-smog fa-2x";
+    }
+    else if(icon === 'Clear sky'){
+        weatherIcon.className += "fas fa-sun fa-2x";
+    }
+    else if(icon === 'Few clouds'){
+        weatherIcon.className += "fas fa-cloud-sun fa-2x";
+    }
+}
 
 function saveCoords(coordsObj){
     localStorage.setItem(COORDS,JSON.stringify(coordsObj));
@@ -62,7 +77,6 @@ function loadCoords(){
     }
 
 }
-
 
 function init(){
     loadCoords();

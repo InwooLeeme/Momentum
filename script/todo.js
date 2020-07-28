@@ -17,6 +17,11 @@ function deleteToDo(event){
    saveToDos();
 }
 
+function textDecorate(event){
+    var number = event.target;
+    number.className += "complete";
+}
+
 function saveToDos(){
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
 }
@@ -27,11 +32,9 @@ function paintToDos(text){
     delBtn.innerText = "X";
     delBtn.addEventListener("click",deleteToDo);
     var span = document.createElement('span');
-    var box = document.createElement('input');
-    var checkBox = box.setAttribute("type","checkbox");
+    span.addEventListener("click",textDecorate);
     var newId = toDos.length + 1;
     span.innerText = text;
-    li.appendChild(box);
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;
@@ -43,6 +46,8 @@ function paintToDos(text){
     toDos.push(toDoObj);
     saveToDos();
 }
+
+
 
 function handldeSubmit(event){
     event.preventDefault();

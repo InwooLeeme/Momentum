@@ -4,7 +4,6 @@
 @import "./toDo.css";
 @import "./lesson.css";
 @import "./header.css";
-@import "./pomodoro.css";
 
 .content__container{
     width: 100%;
