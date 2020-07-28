@@ -1,6 +1,15 @@
+
+.lesson__section {
+    position: absolute;
+    text-align: center;
+    bottom: -30vh;
+}
+
 .lesson__text{
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    background-color: red;
+    font-size: 1.125em;
+    color: #ffffff;
+}
+
+.lesson__text:hover{
+    
 }

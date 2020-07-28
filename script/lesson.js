@@ -1,25 +1,28 @@
 
-var body = document.querySelector('body'),
-    lesson = document.querySelector('.lesson__text');
+var lesson = document.querySelector('.lesson__text');
 
-function paintText(textNumber){
-    var text = new Text(textNumber);
-    lesson.innerText = `./lesson/${textNumber + 1}.txt`;
-    
-    lesson.classList.add("showing");
-    lesson.appendChild(text);
-    console.log("Done");
+function getNumber(number){
+
+    if(number === 0){
+        lesson.innerText = `"I never dreamed about success, I worked for it."`;
+    }
+    else if(number === 1){
+        lesson.innerText = `"Do not try to be original, just try to be good."`;
+    }
+    else{
+        lesson.innerText = `"Do not be afraid to give up the good to go for the great."`;
+    }
 }
 
-function genRandomNumber(){
-    var number = Math.floor(Math.random() * 2);
+function generateNum(){
+    var number = Math.floor(Math.random() * 3);
+    console.log(number);
     return number;
 }
 
 function init(){
-    var randomText = genRandomNumber();
-    paintText(randomText);
-
+    var randomNumber = generateNum();
+    getNumber(randomNumber);
 }
 
 init();
