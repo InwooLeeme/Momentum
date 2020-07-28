@@ -33,11 +33,40 @@
     opacity: 0;
 }
 
-.left__section:hover{
+/* .left__section:hover{
     border-bottom: 1px solid #ffffff;
     opacity: 1;
-}
+} */
 
 #weather-icon{
     margin-right: 10px;
+}
+
+.search__menu{
+    display: none;
+    height: 100px;
+    width: 250px;
+    background-color: black;
+    position: relative;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.on {
+    display: block;
+}
+
+
+.bubble::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: -15px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 15px solid #000;
+    transform: rotate(90deg);
 }
