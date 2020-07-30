@@ -13,30 +13,40 @@ fetch(
     }).then(function(json){
         var temperature = json.main.temp,
             place = json.name,
-            icon = json.weather[0].main;
+            icon = json.weather[0].id;
         weather.innerText = `${temperature}`;
         locate.innerText = `${place}`;
         chageIcon(icon);
-        /* console.log(json.weather[0].main);
-        console.log(weatherIcon); */
+        console.log(json.weather[0].main);
+        console.log(json.weather[0].id);
+        
     });
 }
 
 function chageIcon(icon){
-    if(icon === 'Clouds'){
+    if(801 <= icon <= 804){
         weatherIcon.className += "fas fa-cloud fa-2x";
     }
-    else if(icon === 'Rain'){
+    else if(300 <= icon <= 321){
         weatherIcon.className += "fas fa-cloud-rain fa-2x";
     }
-    else if(icon ==='Mist'){
+    else if(600 <= icon <= 622){
+        weatherIcon.className += "fas fa-snowflake";
+    }
+    else if(701 <= icon <= 781){
         weatherIcon.className += "fas fa-smog fa-2x";
     }
-    else if(icon === 'Clear sky'){
+    else if(icon === 800){
         weatherIcon.className += "fas fa-sun fa-2x";
     }
-    else if(icon === 'Few clouds'){
+    else if(icon === 801){
         weatherIcon.className += "fas fa-cloud-sun fa-2x";
+    }
+    else if(900 <= icon <= 902){
+        weatherIcon.className += "fas fa-poo-storm fa-2x";
+    }
+    else if(icon === 903){
+        weatherIcon.className += "fas fa-temperature-low fa-2x";
     }
 }
 
