@@ -88,6 +88,9 @@ a{
     text-decoration: none;
 }
 
-.links a:hover{
+.links a:hover,
+.fa-search:hover,
+.js-weather:hover,
+#weather-icon:hover{
     color: rgba(255,255,255,1);
 }

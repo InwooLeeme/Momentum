@@ -58,15 +58,17 @@ li button {
 
 @keyframes floating{
     0%{
-        transform : none;
+        /* transform : none; */
+        width: 100%;
         
     }
     50%{
-        transform: scale(1.1);
+        /* transform: scale(1.1); */
+        width: 150%;
         
     }
     100%{
-        transform: none;
-        
+        /* transform: none; */
+        width: 100%;
     }
 }
