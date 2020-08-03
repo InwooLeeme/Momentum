@@ -6,5 +6,19 @@
     transform: translate(-50%);
     font-size: 1.125em;
     color: #ffffff;
-}
+    animation: lesson 2s ease-in-out;
 
+@keyframes lesson {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

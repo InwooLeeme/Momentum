@@ -1,28 +1,27 @@
 
-var lesson = document.querySelector('.lesson__text');
+var text =[
+    `"I never dreamed about success, I worked for it."`,
+    `"Do not try to be original, just try to be good."`,
+    `"Do not be afraid to give up the good to go for the great."`,
+    `"The road to success and the road to failure are almost exactly the same.`,
+    `"It is better to fail in originality than to succeed in imitation.`
+    ]
 
-function getNumber(number){
+var counter = 0;
+var lesson = document.querySelector(".lesson__text");
+var inst = setInterval(changeText,60000);
 
-    if(number === 0){
-        lesson.innerText = `"I never dreamed about success, I worked for it."`;
+function changeText(){
+    lesson.innerHTML = text[counter];
+    counter++;
+    if(counter >= text.length){
+        counter = 0;
     }
-    else if(number === 1){
-        lesson.innerText = `"Do not try to be original, just try to be good."`;
-    }
-    else{
-        lesson.innerText = `"Do not be afraid to give up the good to go for the great."`;
-    }
-}
-
-function generateNum(){
-    var number = Math.floor(Math.random() * 3);
-    console.log(number);
-    return number;
+    
 }
 
 function init(){
-    var randomNumber = generateNum();
-    getNumber(randomNumber);
+    changeText();
 }
 
 init();
